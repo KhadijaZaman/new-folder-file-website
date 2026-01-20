@@ -1,6 +1,6 @@
 # KhadijaZaman.com — Minimal SEO Portfolio
 
-Goal: a minimalistic, high-converting portfolio site for **Khadija Zaman** that communicates thought leadership in **SEO, LLM Visibility (LLM SEO), GEO, AEO, and marketing automation**.
+Goal: a minimalistic, high-converting portfolio site for **Khadija Rafiq Zaman** that communicates thought leadership in **SEO, LLM Visibility (LLM SEO), GEO, AEO, and marketing automation**.
 
 ## Completed features
 - **Single-page, fast-loading portfolio** (`index.html`)

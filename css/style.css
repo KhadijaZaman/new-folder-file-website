@@ -277,11 +277,11 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 
 .modal-container{position:relative; z-index:9001; width:100%; max-width:900px; max-height:90vh; background:var(--panel); border:1px solid var(--line); border-radius: var(--radius); box-shadow:var(--shadow); display:flex; flex-direction:column; animation:slideUp .3s ease}
 
-.modal-close{position:absolute; top:12px; right:12px; z-index:9002; width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.05); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s ease; padding:0}
+.modal-close{position:absolute; top:12px; right:12px; z-index:9002; width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.05); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s ease; padding:0; pointer-events:auto}
 
 .modal-close:hover{background:rgba(255,255,255,.1); border-color:rgba(233,238,246,.2)}
 
-.modal-close svg{width:20px; height:20px}
+.modal-close svg{width:20px; height:20px; pointer-events:none}
 
 .modal-content{display:flex; flex-direction:column; height:100%; overflow-y:auto}
 

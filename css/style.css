@@ -295,7 +295,7 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 
 .modal-info p{margin:0; color:rgba(233,238,246,.88); font-size:14px}
 
-.video-trigger{border:none; background:none; padding:0; cursor:pointer; width:100%; text-align:left}
+.video-trigger{display:block; border:none; background:none; padding:0; cursor:pointer; width:100%; text-align:left}
 
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 

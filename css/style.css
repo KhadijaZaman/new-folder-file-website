@@ -213,6 +213,21 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 .footer a{color:var(--muted); font-weight:650; font-size:14px}
 .footer a:hover{color:var(--text)}
 
+.skills-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+.skill-category{border:1px solid var(--line); background:rgba(255,255,255,.02); border-radius: var(--radius); padding:16px}
+.skill-category h4{margin:0 0 12px; letter-spacing:-.02em; font-size:15px}
+.skill-list{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+.skill-list li{color:rgba(233,238,246,.88); font-size:14px; padding-left:20px; position:relative}
+.skill-list li::before{content:"→"; position:absolute; left:0; color:var(--accent2)}
+
+@media (max-width: 980px){
+  .skills-grid{grid-template-columns: repeat(2, 1fr)}
+}
+
+@media (max-width: 640px){
+  .skills-grid{grid-template-columns: 1fr}
+}
+
 .muted{color:var(--muted)}
 .mono{font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 .small{font-size:13px}

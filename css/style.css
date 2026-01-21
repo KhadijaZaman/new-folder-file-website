@@ -221,7 +221,7 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 
 .video-card:hover{transform:translateY(-2px); border-color:rgba(233,238,246,.2); background:rgba(255,255,255,.035)}
 
-.video-placeholder{aspect-ratio:16/9; background:linear-gradient(135deg, rgba(124,92,255,.15), rgba(0,212,255,.10)); display:flex; align-items:center; justify-content:center; flex-direction:column; position:relative; cursor:pointer}
+.video-placeholder{width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, rgba(124,92,255,.15), rgba(0,212,255,.10)); display:flex; align-items:center; justify-content:center; flex-direction:column; position:relative; cursor:pointer; pointer-events:auto}
 
 .video-placeholder:hover .play-icon{transform:scale(1.1)}
 

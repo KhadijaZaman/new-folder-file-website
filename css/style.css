@@ -74,7 +74,10 @@ a.link:hover{text-decoration-color:var(--accent2)}
 .mobile-nav{
   border-top:1px solid var(--line);
   padding:12px 20px 18px;
-  display:grid; gap:10px;
+  display:none; gap:10px;
+}
+.mobile-nav:not([hidden]){
+  display:grid;
 }
 .mobile-nav a{padding:10px 12px; border-radius:12px; background:rgba(255,255,255,.03); color:var(--text); font-weight:600}
 .mobile-nav a.muted{color:var(--muted)}

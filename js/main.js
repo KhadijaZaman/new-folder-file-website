@@ -73,16 +73,6 @@
     });
   }
 
-  // Also handle clicks directly on the close button's SVG
-  const closeIcon = document.querySelector('.modal-close svg');
-  if(closeIcon){
-    closeIcon.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      closeVideoModal();
-    });
-  }
-
   if(modalOverlay){
     modalOverlay.addEventListener('click', closeVideoModal);
   }

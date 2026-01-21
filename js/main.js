@@ -23,66 +23,6 @@
     });
   }
 
-  // Video lightbox modal
-  const videoModal = document.getElementById('videoModal');
-  const videoPlayer = document.getElementById('videoPlayer');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalClose = document.querySelector('.modal-close');
-  const modalOverlay = document.querySelector('.modal-overlay');
-
-  function openVideoModal(card){
-    if(!card) return;
-    const title = card.getAttribute('data-video-title');
-    const url = card.getAttribute('data-video-url');
-    const desc = card.getAttribute('data-video-desc');
-
-    if(title && url && videoModal && videoPlayer){
-      modalTitle.textContent = title;
-      modalDescription.textContent = desc || '';
-      videoPlayer.src = url;
-      videoModal.hidden = false;
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeVideoModal(){
-    if(videoModal){
-      videoModal.hidden = true;
-      videoPlayer.src = '';
-      document.body.style.overflow = '';
-    }
-  }
-
-  // Use event delegation on document to handle all video triggers
-  document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('.video-trigger');
-    if(trigger){
-      e.preventDefault();
-      e.stopPropagation();
-      const card = trigger.closest('.video-card');
-      if(card) openVideoModal(card);
-    }
-  });
-
-  if(modalClose){
-    modalClose.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      closeVideoModal();
-    });
-  }
-
-  if(modalOverlay){
-    modalOverlay.addEventListener('click', closeVideoModal);
-  }
-
-  window.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && videoModal && !videoModal.hidden){
-      closeVideoModal();
-    }
-  });
-
   // Reveal on scroll
   const revealables = document.querySelectorAll('.section, .hero, .footer');
   revealables.forEach(el => el.classList.add('reveal'));

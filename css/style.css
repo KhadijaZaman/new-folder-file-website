@@ -343,7 +343,6 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 }
 
 @keyframes staggerFadeIn{from{opacity:0; transform:translateY(20px)}to{opacity:1; transform:translateY(0)}}
-@keyframes fadeInUp{from{opacity:0; transform:translateY(30px)}to{opacity:1; transform:translateY(0)}}
 
 /* Responsive */
 @media (max-width: 980px){

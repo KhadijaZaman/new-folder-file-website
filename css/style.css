@@ -303,12 +303,47 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 .mono{font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 .small{font-size:13px}
 
-/* Motion */
+/* Motion & Animations */
 @media (prefers-reduced-motion: no-preference){
-  .btn, .tile{will-change: transform}
-  .reveal{opacity:0; transform: translateY(10px); transition: opacity .45s ease, transform .45s ease}
+  .btn, .tile, .card, .section{will-change: transform}
+
+  /* Staggered reveal animations */
+  .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s cubic-bezier(.25,.46,.45,.94), transform .6s cubic-bezier(.25,.46,.45,.94)}
   .reveal.is-visible{opacity:1; transform: translateY(0)}
+
+  /* Stagger effect for children */
+  .reveal.is-visible .tile:nth-child(1){animation:staggerFadeIn .6s ease-out}
+  .reveal.is-visible .tile:nth-child(2){animation:staggerFadeIn .6s ease-out .1s both}
+  .reveal.is-visible .tile:nth-child(3){animation:staggerFadeIn .6s ease-out .2s both}
+  .reveal.is-visible .tile:nth-child(4){animation:staggerFadeIn .6s ease-out .3s both}
+  .reveal.is-visible .tile:nth-child(5){animation:staggerFadeIn .6s ease-out .4s both}
+  .reveal.is-visible .tile:nth-child(6){animation:staggerFadeIn .6s ease-out .5s both}
+
+  .reveal.is-visible .card:nth-child(1){animation:staggerFadeIn .6s ease-out}
+  .reveal.is-visible .card:nth-child(2){animation:staggerFadeIn .6s ease-out .1s both}
+  .reveal.is-visible .card:nth-child(3){animation:staggerFadeIn .6s ease-out .2s both}
+  .reveal.is-visible .card:nth-child(4){animation:staggerFadeIn .6s ease-out .3s both}
+
+  /* Hero elements animation */
+  .hero h1{opacity:0; animation:fadeInUp .8s ease-out .2s both}
+  .hero .lead{opacity:0; animation:fadeInUp .8s ease-out .4s both}
+  .hero .cta-row{opacity:0; animation:fadeInUp .8s ease-out .6s both}
+  .hero .micro-proof{opacity:0; animation:fadeInUp .8s ease-out .8s both}
+
+  /* Button hover animations */
+  .btn{position:relative; overflow:hidden}
+  .btn::before{content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:rgba(255,255,255,.1); transition:left .3s ease}
+  .btn:hover::before{left:100%}
+
+  /* Card hover lift effect */
+  .tile, .card, .tool-card, .resource-card, .achievement-item, .dev-card, .insight{transition:all .3s cubic-bezier(.25,.46,.45,.94)}
+
+  /* Parallax on scroll for hero */
+  .hero{position:relative}
 }
+
+@keyframes staggerFadeIn{from{opacity:0; transform:translateY(20px)}to{opacity:1; transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0; transform:translateY(30px)}to{opacity:1; transform:translateY(0)}}
 
 /* Responsive */
 @media (max-width: 980px){

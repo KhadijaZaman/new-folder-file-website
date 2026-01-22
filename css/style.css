@@ -248,6 +248,32 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
 .skill-list li{color:rgba(233,238,246,.88); font-size:14px; padding-left:20px; position:relative}
 .skill-list li::before{content:"→"; position:absolute; left:0; color:var(--accent2)}
 
+/* ACHIEVEMENTS SECTION */
+.achievements-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+
+.achievement-item{border:1px solid var(--line); background:rgba(255,255,255,.02); border-radius: var(--radius); padding:20px; text-align:center; transition:transform .15s ease, border-color .15s ease}
+
+.achievement-item:hover{transform:translateY(-2px); border-color:rgba(233,238,246,.2); background:rgba(255,255,255,.035)}
+
+.achievement-stat{margin:0 0 8px; font-size:28px; font-weight:800; background:linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-.02em}
+
+.achievement-desc{margin:0; color:rgba(233,238,246,.88); font-size:14px; line-height:1.6}
+
+/* PROFESSIONAL DEVELOPMENT SECTION */
+.dev-grid{display:grid; grid-template-columns: repeat(2, 1fr); gap:18px}
+
+.dev-card{border:1px solid var(--line); background:rgba(255,255,255,.02); border-radius: var(--radius); padding:18px; transition:transform .15s ease, border-color .15s ease}
+
+.dev-card:hover{transform:translateY(-2px); border-color:rgba(233,238,246,.2); background:rgba(255,255,255,.035)}
+
+.dev-card h4{margin:0 0 6px; font-size:16px; letter-spacing:-.02em; color:var(--text)}
+
+.dev-meta{margin:0 0 8px; font-size:13px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em}
+
+.dev-card p{margin:0 0 6px; color:rgba(233,238,246,.88); font-size:14px}
+
+.dev-card p:last-child{margin:0}
+
 @media (max-width: 980px){
   .video-grid{grid-template-columns: repeat(2, 1fr)}
   .tools-grid{grid-template-columns: repeat(2, 1fr)}

@@ -305,6 +305,7 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
   .skills-grid{grid-template-columns: repeat(2, 1fr)}
   .achievements-grid{grid-template-columns: repeat(2, 1fr)}
   .dev-grid{grid-template-columns: 1fr}
+  .gallery-grid{grid-template-columns: repeat(3, 1fr)}
 }
 
 @media (max-width: 640px){
@@ -313,6 +314,7 @@ input:focus, textarea:focus{border-color: rgba(0,212,255,.35); box-shadow: 0 0 0
   .skills-grid{grid-template-columns: 1fr}
   .achievements-grid{grid-template-columns: 1fr}
   .dev-grid{grid-template-columns: 1fr}
+  .gallery-grid{grid-template-columns: repeat(2, 1fr); gap:12px}
 }
 
 

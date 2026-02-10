@@ -34,7 +34,7 @@
         if(entry.isIntersecting){
           entry.target.classList.add('is-visible');
           // Trigger staggered animations for children
-          const children = entry.target.querySelectorAll('.tile, .card, .tool-card, .resource-card, .achievement-item, .dev-card, .insight');
+          const children = entry.target.querySelectorAll('.tile, .card, .tool-card, .resource-card, .achievement-item, .dev-card, .insight, .gallery-item');
           children.forEach((child, index) => {
             child.style.opacity = '0';
             child.style.transform = 'translateY(20px)';

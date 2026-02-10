@@ -52,15 +52,6 @@
     revealables.forEach(el => el.classList.add('is-visible'));
   }
 
-  // Parallax scroll effect on hero image
-  const profileImg = document.querySelector('.profile-image');
-  if(profileImg && !prefersReduced){
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const speed = 0.5;
-      profileImg.style.transform = `translateY(${scrollY * speed}px)`;
-    }, {passive: true});
-  }
 
   // Contact form: open mail client with prefilled content
   const form = document.getElementById('contactForm');
